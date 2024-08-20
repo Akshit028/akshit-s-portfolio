@@ -1,0 +1,33 @@
+[
+	{
+		"id": 1,
+		"title": "Videotube",
+		"description": "An online video sharing platform",
+		"link": "https://videotube-tweet.vercel.app/"
+		
+	},
+	{
+		"id": 2,
+		"title": "Spotlight",
+		"description": "A blog website",
+		"link": "https://spotlight-blog-website.vercel.app/"
+	},
+	{
+		"id": 3,
+		"title": "Voyesta",
+		"description": "A hotel booking platform",
+		"link": "https://voyesta-v1.vercel.app/"
+	},
+	{
+		"id": 4,
+		"title": "Todo-list",
+		"description": "A to-do list with minimal touch",
+		"link": "https://todo-list-zoro.vercel.app/"
+	},
+	{
+		"id": 5,
+		"title": "All Nike's",
+		"description": "An ecommerce website",
+		"link": "https://all-nikes.netlify.app/"
+	}
+]

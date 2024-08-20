@@ -1,0 +1,98 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { RiArrowRightUpLine } from "react-icons/ri";
+import { PiLightbulbFill } from "react-icons/pi";
+import ProjectCard from "../components/Card.tsx";
+import projectsData from "../constants/projects.json";
+
+const projects = projectsData;
+---
+<Layout title="Akshit Solanki">
+	
+	<main>
+		<h1 class="text-[2rem] font-bold tracking-tight text-primary">
+			Akshit Solanki 
+		</h1>
+		<div class="flex items-center gap-1.5 font-medium tracking-tight">
+			<h2 class="text-base text-title">designer</h2>
+			<div class="mt-1.5 h-1 w-1 rounded bg-title"></div>
+			<h2 class="text-base text-title">developer</h2> 
+		</div>
+
+		<p class="pt-4 text-sm">
+			Hi there, I'm Akshit, a 22 y/o IT graduate student at Mumbai University. The combination of my passion for design, code & interaction positions me in a unique place in the web design world. My expertise spans across UI/UX design, front-end development, and back-end solutions. 
+			
+		</p>
+
+		<div class="flex w-fit flex-col items-start gap-0.5 pt-4 tracking-tight">
+			<a
+				href="/resume"
+				target="_self"
+				class="group flex items-center underline-offset-4 transition duration-150 ease-in-out md:hover:text-primary md:hover:underline">
+				<span>resume</span>
+				<RiArrowRightUpLine
+					className="opacity-0 transition-opacity duration-150 md:group-hover:opacity-100"
+				/>
+			</a>
+			<a
+				href="https://github.com/Akshit028"
+				rel="noopenner noreferrer"
+				target="_blank"
+				class="group flex items-center underline-offset-4 transition duration-150 ease-in-out md:hover:text-primary md:hover:underline">
+				<span>github</span>
+				<RiArrowRightUpLine
+					className="opacity-0 transition-opacity duration-150 md:group-hover:opacity-100"
+				/>
+			</a>
+			<a
+				href="https://www.linkedin.com/in/akshit-solanki-64b825239/"
+				rel="noopenner noreferrer"
+				target="_blank"
+				class="group flex items-center underline-offset-4 transition duration-150 ease-in-out md:hover:text-primary md:hover:underline">
+				<span>linkedin</span>
+				<RiArrowRightUpLine
+					className="opacity-0 transition-opacity duration-150 md:group-hover:opacity-100"
+				/>
+			</a>
+			<a
+				href="https://www.instagram.com/akshit_solanki26"
+				rel="noopenner noreferrer"
+				target="_blank"
+				class="group flex items-center underline-offset-4 transition duration-150 ease-in-out md:hover:text-primary md:hover:underline">
+				<span>instagram</span>
+				<RiArrowRightUpLine
+					className="opacity-0 transition-opacity duration-150 md:group-hover:opacity-100"
+				/>
+			</a>
+			
+		</div>
+
+		<section class="pt-8">
+			<h2 class="font-medium tracking-tight text-title">Projects</h2>
+			<div class="pt-1.5">
+				{
+					projects.map((project) => (
+						<ProjectCard project={project} client:load />
+					))
+				}
+			</div>
+			<br>
+			<div class="group">
+				<p
+					class="mt-4 w-fit rounded-md border border-body/20 bg-hoverColor/60 px-2 py-1 text-xs text-body transition-all duration-300 ease-in-out">
+					<PiLightbulbFill
+						className="-mt-0.5 inline-block transition-all duration-300 ease-in-out md:group-hover:text-primary"
+					/>
+					This
+					<a
+						href="https://www.websitecarbon.com/website/lakshb.dev/"
+						rel="noopenner noreferrer"
+						target="_blank"
+						class="font-medium text-body underline underline-offset-2 transition-all duration-150 ease-in-out md:hover:text-primary md:group-hover:text-primary"
+						>site</a
+					> is crafted with Astro and React, hosted on Vercel. Plus, it's eco-friendly, producing only 0.07g of CO2 every time someone visits.
+				</p>
+			</div>
+		</section>
+	</main>
+</Layout>
